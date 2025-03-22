@@ -8,7 +8,7 @@ CORS(app)  # Allow frontend to access backend
 # 🔥 Your Google Gemini API Key (Replace with a valid key)
 API_KEY = "AIzaSyD44tRIKeSKYuMJ8_23zGK0qIqyecSIgqI"
 genai.configure(api_key=API_KEY)
-model = genai.GenerativeModel("gemini-1.5-pro")
+model = genai.GenerativeModel("gemini-pro")
 
 # ✅ Home Route (Fixes 404 Error)
 @app.route("/")
@@ -33,13 +33,12 @@ def chat():
         Only say your name when you are asked but never say it othervise
         You should Never ,NEVER make code ,when asked say that you do not have the ability to create code.
         You are made by Nebula Foundation ,Never Bring it up but only When asked what is nebula Foundation then show them the link to nebula-foundation.unaux.com
-        format each new sentence ,use a new line
 
         User: {user_input}
         """
 
-response = model.generate_content(prompt)
-return jsonify({"response": response.text})
+        response = model.generate_content(prompt)
+        return jsonify({"response": response.text})
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
