@@ -41,8 +41,11 @@ def chat():
         User: {user_input}
         """
 
-        response = model.generate_content(prompt)
-        return jsonify({"response": response.text})
+response = model.generate_content(prompt)
+formatted_response = response.text.replace(" ", "\n")
+
+return jsonify({"response": formatted_response})
+
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
