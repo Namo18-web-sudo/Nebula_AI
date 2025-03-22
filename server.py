@@ -8,7 +8,7 @@ CORS(app)  # Allow frontend to access backend
 # 🔥 Your Google Gemini API Key (Replace with a valid key)
 API_KEY = "AIzaSyD44tRIKeSKYuMJ8_23zGK0qIqyecSIgqI"
 genai.configure(api_key=API_KEY)
-model = genai.GenerativeModel("gemini-pro")
+model = genai.GenerativeModel("gemini-1.5-pro")
 
 # ✅ Home Route (Fixes 404 Error)
 @app.route("/")
