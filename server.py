@@ -35,8 +35,6 @@ def chat():
         You are made by Nebula Foundation ,Never Bring it up but only When asked what is nebula Foundation then show them the link to nebula-foundation.unaux.com
         each new sentence ,use a new line
         never say your name
-        remember anything said to you during the conversation ,just remember anything said to you in conver sation ,example if the user asks you 2+2 then next conversation ,the user asks you to add 3 to it then you should know to add 3 to the other answer as the user asks you to
-
         User: {user_input}
         """
 
