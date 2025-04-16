@@ -8,7 +8,7 @@ CORS(app)
 # 🔐 Google Gemini API Key
 API_KEY = "AIzaSyAi-T726fwJy0YdaTlFxwqwIge1Ic36_eM"
 genai.configure(api_key=API_KEY)
-model = genai.GenerativeModel("gemini-pro")
+model = genai.GenerativeModel("gemini-pro-vision")
 
 # ✅ Home Route
 @app.route("/")
