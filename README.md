@@ -1,1 +1,2 @@
-# Nebula_AI-Try-
+# Nebula_AI
+Nebula_AI is an AI
